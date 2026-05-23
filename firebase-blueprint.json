@@ -1,0 +1,21 @@
+{
+  "entities": {
+    "Score": {
+      "title": "Score",
+      "description": "User's global score",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "score": { "type": "number" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["uid", "score", "updatedAt"]
+    }
+  },
+  "firestore": {
+    "scores/{scoreId}": {
+      "schema": "Score",
+      "description": "Tracking user scores for the Eid challenge"
+    }
+  }
+}
